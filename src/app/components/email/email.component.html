@@ -1,0 +1,19 @@
+<div [formGroup]="form">
+  <h3>Email</h3>
+
+  <div class="main">
+    <div class="inputLine">
+      <span class="inpLabel">Input Text</span><br/>
+      <div class="inputText">
+        <textarea class="form-control textarea-autosize"  formControlName="inputText" autosize rows="1" placeholder=""></textarea>
+      </div>
+      <div class="submit">
+        <button type="button" class="btn btn-vtac-dark-blue rounded apply-btn" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+    <div class="responseText">
+      <span class="inpLabel">Response Text</span><br/>
+      <textarea class="form-control textarea-autosize" [innerHTML]="responseText?.value" autosize rows="1" placeholder=""></textarea>
+    </div>
+  </div>
+</div>

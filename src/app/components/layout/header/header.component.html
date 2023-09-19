@@ -1,0 +1,158 @@
+<!--Main Navigation-->
+<nav class="masthead navbar fixed-top py-0 my-0 container-fluid bottom-border-blur">
+  <nav id="mainnav" class="navbar navbar-expand-lg navbar-light bg-white shadow-none container-fluid">
+    <div class="container-xl"> <a class="navbar-brand" href="/"><img
+      src="assets/images/vtac-logo.png" alt="VTAC logo" width="130px" height="50px"></a>
+      <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+              data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle px-lg-2 px-xl-3" id="id01" href="#" ngbDropdownToggle>About us</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="id01" ngbDropdownMenu>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/about">About Us</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/privacy">Privacy &amp; Legal</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/mediacentre">Media Centre</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/advertising">Advertising</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/employment">Working at VTAC</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle px-lg-2 px-xl-3" id="id02" href="#" ngbDropdownToggle>Applying</a>
+            <div class="applying-menu dropdown-menu dropdown-menu-start shadow" data-bs-popper="static"
+                 aria-labelledby="id02" ngbDropdownMenu>
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 pt-3 pb-2 py-lg-4">
+                      <dl>
+                        <dt>Planning</dt>
+                        <hr class="mt-1 mb-2">
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/guides/y12guide">Australian year 12 students
+                        </a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/start/international">International year 12
+                          students </a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/guides/maguide">Post-school applicants</a>
+                        </dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/guides/y10guide">Year 10 students </a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/guides/y11guide">Year 11 students </a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/start/caregivers">Parents &amp;
+                          caregivers</a>
+                        </dd>
+                        <hr class="mb-2">
+                        <dd><a class="dropdown-item ps-0 py-0 fw-medium" target="_blank"  href="https://vtac.edu.au/before">Before you apply</a> </dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/research/coursesearch">Finding courses</a>
+                        </dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/before/research/codes-fees">Am I eligible?</a> </dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/institutions">Universities, TAFEs &amp; Colleges</a>
+                        </dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/institutions/pathways">Pathways</a></dd>
+                      </dl>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-8 pt-0 pb-2 py-lg-4">
+                      <div class="row">
+                        <div class="col-12 col-lg-6 mt-0 mt-md-3 mt-lg-0">
+                          <dl>
+                            <dt>Applying</dt>
+                            <hr class="mt-1 mb-2">
+                            <dd><a class="dropdown-item ps-0 py-0 fw-medium" target="_blank"  href="https://vtac.edu.au/applying">How to apply</a></dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/applying/account">Create an account</a></dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/applying/courses">How to apply for courses</a>
+                            </dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/access/scholarships">Scholarships</a></dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/access/seas">Special Entry Access Schemes</a>
+                            </dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/applying/demos">Demo applications</a></dd>
+                            <!--<dd><a class="dropdown-item ps-0 py-0" href="#">Mid-year
+                                                                          applications</a></dd>-->
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/applying/courses/cop">Changing course
+                              preferences</a></dd>
+                          </dl>
+                        </div>
+                        <div class="col-12 col-lg-6 pt-0 pb-2">
+                          <dl>
+                            <dt>Results &amp; offers</dt>
+                            <hr class="mt-1 mb-2">
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/atar">ATAR</a> </dd>
+                            <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/offers">Offers</a> </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle px-lg-2 px-xl-3" id="id03" href="#" ngbDropdownToggle>Schools</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="id03" ngbDropdownMenu>
+              <li><a class="dropdown-item" href="https://delta.vtac.edu.au/courselink/" target="_blank">CourseLink</a></li>
+              <li><a class="dropdown-item" href="http://vtacschools.wordpress.com/" target="_blank">News feed (blog)</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/careers">Careers practitioners site</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/careers/resources-download">Guides &amp; fact sheets</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle px-lg-2 px-xl-3" id="id04" href="#" ngbDropdownToggle>Institutions</a>
+            <ul class="dropdown-menu shadow" aria-labelledby="id04" ngbDropdownMenu>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/institutions">VTAC partner institutions</a></li>
+              <li><a class="dropdown-item" href="https://delta.vtac.edu.au/viaOnline/home.htm" target="_blank">viaOnline</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/partner">Become a VTAC Partner</a></li>
+              <li><a class="dropdown-item" target="_blank"  href="https://vtac.edu.au/advertising">Advertise with VTAC</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle px-lg-2 px-xl-3" id="id05" href="#" ngbDropdownToggle>Help</a>
+            <div class="help-menu dropdown-menu dropdown-menu-end dropdown-menu-xl-start shadow" data-bs-popper="static"
+                 aria-labelledby="id05" ngbDropdownMenu>
+              <div class="mega-content px-4">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 col-md-6 pt-3 pb-2 py-lg-4 contact-menu">
+                      <dl>
+                        <dt>Contact</dt>
+                        <hr class="mt-1 mb-2">
+                        <dd class="dropdown-item ps-0 py-0 lh-sm"><span
+                          class="dd-icon material-symbols-outlined mt-0">phone_enabled</span><span class="dd-text">+613
+                          9926 1020<br><small class="ms-4">9:30am-5pm (Victorian time) M-F</small></span></dd>
+                        <dd class="dropdown-item ps-0 py-1 lh-sm"><span
+                          class="dd-icon material-symbols-outlined mt-n1">location_on</span><span class="dd-text">40
+                          Park
+                          Street<br><span class="ms-4">South Melbourne VIC 3205</span><br><span
+                            class="ms-4">AUSTRALIA</span></span></dd>
+                        <dd class="ps-0 py-0 lh-sm"><span
+                          class="dd-icon material-symbols-outlined mt-n1">mark_email_unread</span><span
+                          class="dd-text"><a class="dropdown-item ps-1 d-inline" target="_blank"  href="https://vtac.edu.au/contact/email">Email
+                            VTAC</a></span></dd>
+                        <dd class="ps-0 py-0 lh-sm"><span class="dd-icon material-symbols-outlined mt-0">forum</span><span
+                          class="dd-text"><a class="dropdown-item ps-1 py-0 d-inline" target="_blank"  href="https://vtac.edu.au/help">Frequently Asked
+                            Questions</a></span></dd>
+                      </dl>
+                    </div>
+                    <div class="col-12 col-md-6 pt-0 pb-2 py-lg-4 mt-0 mt-md-3 mt-lg-0">
+                      <dl>
+                        <dt>Help</dt>
+                        <hr class="mt-1 mb-2">
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/help">Help Centre</a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/dates">Dates</a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/factsheets">Fact sheets</a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/atar/past">Request replacement ATAR</a></dd>
+                        <dd><a class="dropdown-item ps-0 py-0" target="_blank"  href="https://vtac.edu.au/help/glossary">Glossary</a></dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</nav>
+<!--/Main Navigation-->
+

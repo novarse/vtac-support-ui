@@ -1,0 +1,31 @@
+.main {
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.submit {
+  display: grid;
+  justify-content: right;
+}
+
+.inputLine {
+  display: grid;
+  grid-template-columns: auto 100px;
+}
+
+textarea.textarea-autosize {
+  height: 2.25rem;
+  min-height: 2.25rem;
+  resize: none;
+  overflow-y:hidden;
+}
+
+textarea.textarea-autosize.form-control-lg {
+  height: 3.75rem;
+  min-height: 3.75rem;
+}
+
+textarea.textarea-autosize.form-control-sm {
+  height: 2rem;
+  min-height: 2rem;
+}
