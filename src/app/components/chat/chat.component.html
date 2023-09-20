@@ -1,8 +1,8 @@
 <div [formGroup]="form">
-  <h3>Chat</h3>
+  <h3 class="section-title">Chat</h3>
 
   <div class="main">
-    <div class="card mb-3" *ngIf="historyList.length > 0">
+    <div class="card mb-3 history-card">
       <ng-container *ngFor="let history of historyList">
         <ng-container *ngIf="history.type === Constants.HISTORYTYPE_CALL">
           <div class="historyCall">
