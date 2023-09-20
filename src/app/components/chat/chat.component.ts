@@ -84,6 +84,10 @@ export class ChatComponent implements OnInit, AfterViewInit {
       scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
     }, 0);
   }
+
+  onTextEntered() {
+    this.onSubmit();
+  }
 }
 
 class HistoryText {
