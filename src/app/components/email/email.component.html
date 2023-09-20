@@ -3,7 +3,6 @@
 
   <div class="main">
     <div class="inputLine">
-      <span class="inpLabel">Input Text</span><br/>
       <div class="inputText">
         <input class="form-control"  formControlName="input" autosize rows="1" placeholder="Enter text" (keyup.enter)="onSubmit()">
       </div>
@@ -12,7 +11,7 @@
       </div>
     </div>
     <div class="responseText">
-      <span class="inpLabel">Response Text</span><br/>
+      <span class="inpLabel">Generated Text</span><br/>
       <div class="card mb-2" [innerHTML]="responseText"></div>
     </div>
   </div>
