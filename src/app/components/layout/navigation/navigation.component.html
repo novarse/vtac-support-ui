@@ -1,7 +1,7 @@
-<div class="card mb-3">
+<div class="card mb-3 cardgray">
   <div class="nav-body">
-    <div class="link"><a routerLink="/email" class="no-decoration text-black">Email</a></div>
-    <div class="link"><a routerLink="/chat" class="no-decoration text-black">Chat</a></div>
+    <div class="link"><a routerLink="/email" class="no-decoration text-black" [ngClass]="{'bolded': common.page.getValue() === 'EMAIL'}">Email</a></div>
+    <div class="link"><a routerLink="/chat" class="no-decoration text-black" [ngClass]="{'bolded': common.page.getValue() === 'CHAT'}">Chat</a></div>
   </div>
 </div>
 

@@ -18,4 +18,8 @@ export class HttpService {
     return this.http.post<String>('/api/email', body);
   }
 
+  postChatResponse(body: string): Observable<any> {
+    return this.http.post<String>('/api/chat', body);
+  }
+
 }

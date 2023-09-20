@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {CommonService} from "../../../services/common.service";
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public common: CommonService) { }
 
   ngOnInit(): void {
   }
+
 
 }

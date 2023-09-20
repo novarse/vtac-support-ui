@@ -1,1 +1,35 @@
-<h3>Chat</h3>
+<div [formGroup]="form">
+  <h3>Chat</h3>
+
+  <div class="main">
+    <div class="card mb-3" *ngIf="historyList.length > 0">
+      <ng-container *ngFor="let history of historyList">
+        <ng-container *ngIf="history.type === Constants.HISTORYTYPE_CALL">
+          <div class="historyCall">
+            <div>
+              <div class="card chatcard mb-3 historyCallColour">{{history.text}}</div>
+            </div>
+            <div></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="history.type === Constants.HISTORYTYPE_RESPONSE">
+          <div class="historyResponse">
+            <div></div>
+            <div>
+              <div class="card chatcard mb-3 historyResponseColour" [innerHTML]="history.text"></div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="inputLine">
+      <div class="inputText">
+        <textarea class="form-control textarea-autosize"  formControlName="input" autosize rows="1" placeholder="Enter text"></textarea>
+      </div>
+      <div class="submit">
+        <button type="button" class="btn btn-vtac-dark-blue rounded apply-btn" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="position: relative; top: 100px; color: white" id="afterInputLine"> b</div>

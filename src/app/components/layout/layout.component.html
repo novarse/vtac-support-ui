@@ -1,18 +1,16 @@
-<header><app-header></app-header></header>
+<!--<header><app-header></app-header></header>-->
 
 <!-- Main -->
-<main class="container-fluid">
   <section id="content-layout">
-  <article id="main" class="container">
-    <app-navigation></app-navigation>
-    <div class="card mb-3">
-      <router-outlet></router-outlet>
-    </div>
-  </article>
+    <article id="main" class="container">
+      <app-navigation></app-navigation>
+      <div class="card mb-3 cardgray">
+        <router-outlet></router-outlet>
+      </div>
+    </article>
   </section>
-</main>
 
-<footer><app-footer></app-footer></footer>
+<!--<footer><app-footer></app-footer></footer>-->
 
 <app-toast-container aria-live="polite" aria-atomic="true"></app-toast-container>
 
@@ -20,6 +18,7 @@
   bdColor="rgba(51,51,51,0.8)"
   size="medium"
   color="#fff"
+  type="ball-scale-multiple"
   template="<img src='assets/images/loading.gif' width='100px' />"
 >
   <p style="font-size: 20px; color: white">Loading...</p>

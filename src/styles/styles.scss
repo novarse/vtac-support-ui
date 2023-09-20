@@ -218,6 +218,10 @@ input {
   padding: 20px;
 }
 
+.chatcard {
+  padding: 10px;
+}
+
 .button-13 {
   background-color: #fff;
   border: 1px solid #d5d9d9;
@@ -258,5 +262,31 @@ input {
 
 .apply-btn:hover {
   color: #06068F !important;
+  font-weight: bold;
+}
+
+
+textarea.textarea-autosize {
+  height: 2.25rem;
+  min-height: 2.25rem;
+  resize: none;
+  overflow-y:hidden;
+}
+
+textarea.textarea-autosize.form-control-lg {
+  height: 3.75rem;
+  min-height: 3.75rem;
+}
+
+textarea.textarea-autosize.form-control-sm {
+  height: 2rem;
+  min-height: 2rem;
+}
+
+.cardgray {
+  background-color: #f1f1f1;
+}
+
+.bolded {
   font-weight: bold;
 }

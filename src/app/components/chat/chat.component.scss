@@ -1,0 +1,37 @@
+.main {
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.submit {
+  display: grid;
+  justify-content: right;
+}
+
+.inputLine {
+  display: grid;
+  grid-template-columns: auto 100px;
+}
+
+.historyCall {
+  display: grid;
+  grid-template-columns: fit-content(90%) auto;
+}
+
+.historyResponse {
+  display: grid;
+  grid-template-columns: auto fit-content(90%);
+}
+
+.historyCallColour {
+  background-color: #8bc34a;
+  width: fit-content;
+}
+
+.historyResponseColour {
+  background-color: wheat;
+  width: fit-content;
+}
+
+
+
