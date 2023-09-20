@@ -7,7 +7,7 @@
         <ng-container *ngIf="history.type === Constants.HISTORYTYPE_CALL">
           <div class="historyCall">
             <div>
-              <div class="card chatcard mb-3 historyCallColour" [innerHTML]="history.text"></div>
+              <div class="card chatcard mb-3 historyCallColour" [innerText]="history.text"></div>
             </div>
             <div></div>
           </div>
