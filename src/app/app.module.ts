@@ -17,7 +17,6 @@ import {HomeComponent} from "./components/home/home.component";
 import { EmailComponent } from './components/email/email.component';
 import { ChatComponent } from './components/chat/chat.component';
 import {HeaderInterceptor} from "./interceptors/header-interceptor";
-import {AutosizeModule} from "ngx-autosize";
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import {AutosizeModule} from "ngx-autosize";
     NgbTooltipModule,
     HttpClientModule,
     NgbModule,
-    AutosizeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true },

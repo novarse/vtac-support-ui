@@ -2,12 +2,12 @@
   <h3 class="section-title">Chat</h3>
 
   <div class="main">
-    <div class="card mb-3 history-card">
+    <div class="card mb-3 history-card" #scrollableDiv>
       <ng-container *ngFor="let history of historyList">
         <ng-container *ngIf="history.type === Constants.HISTORYTYPE_CALL">
           <div class="historyCall">
             <div>
-              <div class="card chatcard mb-3 historyCallColour">{{history.text}}</div>
+              <div class="card chatcard mb-3 historyCallColour" [innerHTML]="history.text"></div>
             </div>
             <div></div>
           </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="inputLine">
       <div class="inputText">
-        <textarea class="form-control textarea-autosize"  formControlName="input" autosize rows="1" placeholder="Enter text"></textarea>
+        <input class="form-control"  formControlName="input" autosize rows="1" placeholder="Enter text">
       </div>
       <div class="submit">
         <button type="button" class="btn btn-vtac-dark-blue rounded apply-btn" (click)="onSubmit()">Submit</button>
@@ -32,4 +32,3 @@
     </div>
   </div>
 </div>
-<div style="position: relative; top: 100px; color: white" id="afterInputLine"> b</div>

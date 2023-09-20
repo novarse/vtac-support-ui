@@ -10,7 +10,7 @@
 
 .inputLine {
   display: grid;
-  grid-template-columns: auto 100px;
+  grid-template-columns: auto 80px;
 }
 
 .historyCall {
@@ -39,6 +39,14 @@
 
 .history-card {
   height: calc(100vh - 300px);
+  overflow: auto;
+}
+
+.apply-btn {
+  height: 38px;
+  padding: 10px;
+  position: relative;
+  top: 2px;
 }
 
 

@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {HttpService} from "../../services/http.service";
 import {UtilsService} from "../../services/utils.service";
@@ -15,7 +15,9 @@ import {ViewportScroller} from "@angular/common";
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('scrollableDiv') scrollableDivRef!: ElementRef;
 
   form: FormGroup;
   historyList: HistoryText[] = [];
@@ -57,7 +59,8 @@ export class ChatComponent implements OnInit {
         .pipe(
           tap((res: ChatSentenceDto) => {
               this.historyList.push(new HistoryText(Constants.HISTORYTYPE_RESPONSE, res.assistent));
-            document.querySelector('#afterInputLine')?.scrollIntoView()
+              const scrollableDiv = this.scrollableDivRef.nativeElement;
+              scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
             }
           ),
           catchError(this.utils.handleError()),
@@ -73,6 +76,14 @@ export class ChatComponent implements OnInit {
   }
 
   protected readonly Constants = Constants;
+
+  ngAfterViewInit() {
+    // Call scrollToBottom after the view has initialized
+    setTimeout(() => {
+      const scrollableDiv = this.scrollableDivRef.nativeElement;
+      scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+    }, 0);
+  }
 }
 
 class HistoryText {
