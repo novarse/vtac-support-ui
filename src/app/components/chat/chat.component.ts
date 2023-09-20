@@ -85,9 +85,6 @@ export class ChatComponent implements OnInit, AfterViewInit {
     }, 0);
   }
 
-  onTextEntered() {
-    this.onSubmit();
-  }
 }
 
 class HistoryText {

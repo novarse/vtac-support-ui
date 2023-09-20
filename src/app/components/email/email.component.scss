@@ -10,6 +10,13 @@
 
 .inputLine {
   display: grid;
-  grid-template-columns: auto 100px;
+  grid-template-columns: auto 80px;
+}
+
+.apply-btn {
+  height: 38px;
+  padding: 10px;
+  position: relative;
+  top: 2px;
 }
 
