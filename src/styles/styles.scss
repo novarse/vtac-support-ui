@@ -8,7 +8,8 @@
 @import 'dragula';
 
 html {
-  scroll-behavior: auto !important;
+  //scroll-behavior: auto !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -293,4 +294,26 @@ textarea.textarea-autosize.form-control-sm {
 
 h3.section-title {
   margin-top: 0;
+}
+
+/* width */
+#scrollableDiv::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+#scrollableDiv::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+#scrollableDiv::-webkit-scrollbar-thumb {
+  background: #818181;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#scrollableDiv::-webkit-scrollbar-thumb:hover {
+  background: #666666;
 }

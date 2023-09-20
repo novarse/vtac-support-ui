@@ -2,7 +2,7 @@
   <h3 class="section-title">Chat</h3>
 
   <div class="main">
-    <div class="card mb-3 history-card" #scrollableDiv>
+    <div class="card mb-3 history-card" #scrollableDiv id="scrollableDiv">
       <ng-container *ngFor="let history of historyList">
         <ng-container *ngIf="history.type === Constants.HISTORYTYPE_CALL">
           <div class="historyCall">

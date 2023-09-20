@@ -9,6 +9,7 @@ import {Constants} from "../../utils/constants";
 import {NgxSpinner, NgxSpinnerService} from "ngx-spinner";
 import {CommonService} from "../../services/common.service";
 import {ViewportScroller} from "@angular/common";
+import {Utils} from "../../utils/utils";
 
 @Component({
   selector: 'app-chat',
@@ -59,14 +60,13 @@ export class ChatComponent implements OnInit, AfterViewInit {
         .pipe(
           tap((res: ChatSentenceDto) => {
               this.historyList.push(new HistoryText(Constants.HISTORYTYPE_RESPONSE, res.assistent));
-              const scrollableDiv = this.scrollableDivRef.nativeElement;
-              scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
             }
           ),
           catchError(this.utils.handleError()),
           finalize(() => {
             this.input?.setValue("");
             this.spinner.hide();
+            this.refreshScrollTop();
           })
         )
         .subscribe();
@@ -80,6 +80,13 @@ export class ChatComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
   }
 
+  refreshScrollTop() {
+    Utils.sleep(100).then(() => {
+      const scrollableDiv = this.scrollableDivRef.nativeElement;
+      scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+      }
+    );
+  }
 }
 
 class HistoryText {
