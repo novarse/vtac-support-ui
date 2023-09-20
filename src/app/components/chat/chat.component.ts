@@ -78,11 +78,6 @@ export class ChatComponent implements OnInit, AfterViewInit {
   protected readonly Constants = Constants;
 
   ngAfterViewInit() {
-    // Call scrollToBottom after the view has initialized
-    setTimeout(() => {
-      const scrollableDiv = this.scrollableDivRef.nativeElement;
-      scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
-    }, 0);
   }
 
 }
